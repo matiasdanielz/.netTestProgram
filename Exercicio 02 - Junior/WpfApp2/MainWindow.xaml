@@ -1,0 +1,80 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Processamento de Arquivos" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{materialDesign:MaterialDesignFont}">
+    <Grid>
+        <materialDesign:Card>
+            <Grid Margin="10">
+                <!-- Grid Definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button 
+                        Grid.Column="0" 
+                        Content="Importar itens" 
+                        Click="AddItem_Click"
+                        Width="250"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                    />
+                    <StackPanel
+                    Grid.Column="1" >
+                        <TextBlock Text="Previsão do Tempo (CXS)" FontSize="20" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <TextBlock Name="weatherDescription" Text="Clima: Ensolarado" Margin="0,10,0,0"/>
+                        <TextBlock Name="weatherTemperature" Text="Temperatura: 25°C" Margin="0,10,0,0"/>
+                        <TextBlock Name="weatherHumidity" Text="Umidade: 50%" Margin="0,10,0,0"/>
+                        <!-- Você pode adicionar mais informações aqui -->
+                    </StackPanel>
+
+                </Grid>
+                <DataGrid 
+                    x:Name="dataGrid" 
+                    Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Window}}" 
+                    Grid.Row="1" 
+                    AutoGenerateColumns="False"
+                    Margin="0,15,0,0"
+                    IsReadOnly="true">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn 
+                            Header="Nome" 
+                            Binding="{Binding name}"
+                            Width="*"/>
+                        <DataGridTextColumn 
+                            Header="Idade" 
+                            Binding="{Binding age}"
+                            Width="*"/>
+                        <DataGridTextColumn 
+                            Header="Email" 
+                            Binding="{Binding email}"
+                            Width="*"/>
+                        <DataGridTextColumn 
+                            Header="Telefone" 
+                            Binding="{Binding phone}"
+                            Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>

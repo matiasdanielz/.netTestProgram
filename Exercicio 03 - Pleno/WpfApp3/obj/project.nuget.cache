@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "gG62UIFO67DRogeGF+Y33MT2XAlWzOaO2iUmeJVnBioZ6fuATiml4JY8wH+cTsbQFKb13ckQRVZfxkOd9yB4xw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danie\\Documentos\\Desenvolvimento\\C#\\testeDeltaFire\\Exercicio 03 - Pleno\\WpfApp3\\WpfApp3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danie\\.nuget\\packages\\materialdesigncolors\\3.0.0\\materialdesigncolors.3.0.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\materialdesignthemes\\5.0.0\\materialdesignthemes.5.0.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

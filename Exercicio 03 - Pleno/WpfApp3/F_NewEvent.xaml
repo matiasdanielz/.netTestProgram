@@ -1,0 +1,82 @@
+﻿<Window x:Class="WpfApp3.F_NewEvent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="F_NewEvent" Height="450" Width="800"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{materialDesign:MaterialDesignFont}">
+    <Grid VerticalAlignment="Center" Margin="35,0,35,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label 
+            Grid.Row="0" 
+            Grid.Column="0" 
+            Margin="0,0,20,0">
+            Nome:
+        </Label>
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,0,20,0"
+            Name="newEventNameTextField">
+        </TextBox>
+        <Label 
+            Grid.Row="0" 
+            Grid.Column="1" 
+            Margin="0,0,20,0">
+            Data:
+        </Label>
+        <DatePicker
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,20,0"
+            Name="newEventDateTextField"></DatePicker>
+        <Label 
+            Grid.Row="2" 
+            Grid.Column="0"
+            Margin="0,0,20,0">
+            Local:
+        </Label>
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="0,0,20,0"
+            Name="newEventLocalizationTextField">
+        </TextBox>
+        <Label 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Margin="0,0,20,0">
+            Descrição:
+        </Label>
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="0,0,20,0"
+            Name="newEventDescriptionTextField">
+        </TextBox>
+
+        <Button Grid.Column="0" Grid.Row="6" Margin="0,0,20,0" Click="OnCloseButton_Click">Cancelar</Button>
+        <Button Grid.Column="1" Grid.Row="6" Margin="0,0,20,0" Click="OnNewEventAddButton_Click">Adicionar</Button>
+    </Grid>
+</Window>
